@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <canvas id="background-canvas"></canvas>
+    
+    <section id="start-page">
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        
+        <h1 class="logo">
+            <span class="logo-text">Wild Store</span>
+            <div class="logo-underline"></div>
+        </h1>
+        <p class="quote" id="quote-text">цифровые товары тут</p>
+        <a class="start-link" id="start-link">
+            <span>начать листать</span>
+            <div class="link-arrow">→</div>
+        </a>
+    </section>
+    
+    <section id="main-page">
+        <!-- Аватары -->
+        <h2 class="category-title" data-ru="Игровые и кастомные аватары" data-en="Gaming and Custom Avatars">
+            <i class="fas fa-gamepad"></i>
+            <span>Игровые и кастомные аватары</span>
+        </h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Игровая аватарка" data-en="Gaming Avatar">Игровая аватарка</h3>
+                <p class="service-description" data-ru="Стильная игровая аватарка для вашего профиля" data-en="Stylish gaming avatar for your profile">Стильная игровая аватарка для вашего профиля</p>
+                <div class="service-price">120₽ / 140G</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Аватарки для клана" data-en="Clan Avatars">Аватарки для клана</h3>
+                <p class="service-description" data-ru="Набор аватарок для членов клана или команды" data-en="Set of avatars for clan or team members">Набор аватарок для членов клана или команды</p>
+                <div class="service-price">40₽ / 60G</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Кастомная аватарка" data-en="Custom Avatar">Кастомная аватарка</h3>
+                <p class="service-description" data-ru="Уникальная аватарка по вашему индивидуальному заказу" data-en="Unique avatar according to your individual order">Уникальная аватарка по вашему индивидуальному заказу</p>
+                <div class="service-price">120₽ / 140G</div>
+            </div>
+        </div>
+
+        <!-- Дизайн -->
+        <h2 class="category-title" data-ru="Дизайн для соцсетей и бизнеса" data-en="Design for Social Media and Business">
+            <i class="fas fa-paint-brush"></i>
+            <span>Дизайн для соцсетей и бизнеса</span>
+        </h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Логотип для фирмы" data-en="Company Logo">Логотип для фирмы</h3>
+                <p class="service-description" data-ru="Профессиональный логотип для вашего бизнеса" data-en="Professional logo for your business">Профессиональный логотип для вашего бизнеса</p>
+                <div class="service-price">130₽ / 150G</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Баннер для соц. сетей (игровой стиль)" data-en="Social Media Banner (Gaming Style)">Баннер для соц. сетей (игровой стиль)</h3>
+                <p class="service-description" data-ru="Стильный баннер в игровой тематике для ваших соцсетей" data-en="Stylish banner in gaming theme for your social networks">Стильный баннер в игровой тематике для ваших соцсетей</p>
+                <div class="service-price">130₽ / 150G</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Баннер для соц. сетей (кастомный стиль)" data-en="Social Media Banner (Custom Style)">Баннер для соц. сетей (кастомный стиль)</h3>
+                <p class="service-description" data-ru="Индивидуальный баннер по вашему уникальному дизайну" data-en="Individual banner according to your unique design">Индивидуальный баннер по вашему уникальному дизайну</p>
+                <div class="service-price">140₽ / 160G</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Превью для мувика" data-en="Video Thumbnail">Превью для мувика</h3>
+                <p class="service-description" data-ru="Привлекательная обложка для вашего видео" data-en="Attractive cover for your video">Привлекательная обложка для вашего видео</p>
+                <div class="service-price">110₽ / 130G</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Превью по требованию" data-en="Thumbnail on Demand">Превью по требованию</h3>
+                <p class="service-description" data-ru="Превью созданное по вашим конкретным требованиям" data-en="Thumbnail created according to your specific requirements">Превью созданное по вашим конкретным требованиям</p>
+                <div class="service-price">120₽ / 140G</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Создание рекламных баннеров" data-en="Advertising Banners">Создание рекламных баннеров</h3>
+                <p class="service-description" data-ru="Эффективные рекламные баннеры для продвижения" data-en="Effective advertising banners for promotion">Эффективные рекламные баннеры для продвижения</p>
+                <div class="service-price">199₽ / 240G</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Фото для поста" data-en="Photo for Post">Фото для поста</h3>
+                <p class="service-description" data-ru="Качественные изображения для публикаций в соцсетях" data-en="Quality images for social media publications">Качественные изображения для публикаций в соцсетях</p>
+                <div class="service-price">149₽ / 179G</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Фото для розыгрыша" data-en="Photo for Giveaway">Фото для розыгрыша</h3>
+                <p class="service-description" data-ru="Яркие изображения для проведения конкурсов и розыгрышей" data-en="Bright images for contests and giveaways">Яркие изображения для проведения конкурсов и розыгрышей</p>
+                <div class="service-price">110₽ / 130G</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Создание презентаций" data-en="Presentation Creation">Создание презентаций</h3>
+                <p class="service-description" data-ru="Профессиональные презентации для ваших проектов" data-en="Professional presentations for your projects">Профессиональные презентации для ваших проектов</p>
+                <div class="service-price">130₽ / 150G</div>
+            </div>
+        </div>
+
+        <!-- Мультимедиа -->
+        <h2 class="category-title" data-ru="Мультимедиа и администрирование" data-en="Multimedia and Administration">
+            <i class="fas fa-video"></i>
+            <span>Мультимедиа и администрирование</span>
+        </h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Озвучка видео" data-en="Video Voiceover">Озвучка видео</h3>
+                <p class="service-description" data-ru="Профессиональная озвучка ваших видеороликов" data-en="Professional voiceover for your videos">Профессиональная озвучка ваших видеороликов</p>
+                <div class="service-price">160₽ / 180G</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Менеджер соц. сетей (1 месяц)" data-en="Social Media Manager (1 month)">Менеджер соц. сетей (1 месяц)</h3>
+                <p class="service-description" data-ru="Полное управление вашими социальными сетями в течение месяца" data-en="Complete management of your social networks for a month">Полное управление вашими социальными сетями в течение месяца</p>
+                <div class="service-price">2500₽ / 2700G</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Модератор чата (1 месяц)" data-en="Chat Moderator (1 month)">Модератор чата (1 месяц)</h3>
+                <p class="service-description" data-ru="Модерация вашего чата или сообщества в течение месяца" data-en="Moderation of your chat or community for a month">Модерация вашего чата или сообщества в течение месяца</p>
+                <div class="service-price">550₽ / 570G</div>
+            </div>
+        </div>
+
+        <!-- Программирование -->
+        <h2 class="category-title" data-ru="Код и программирование" data-en="Code and Programming">
+            <i class="fas fa-code"></i>
+            <span>Код и программирование</span>
+        </h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Курс Python (Newbie)" data-en="Python Course (Newbie)">Курс Python (Newbie)</h3>
+                <p class="service-description" data-ru="Основы синтаксиса и логики программирования на Python" data-en="Basics of syntax and programming logic in Python">Основы синтаксиса и логики программирования на Python</p>
+                <div class="service-price">250₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Курс Python (Basic)" data-en="Python Course (Basic)">Курс Python (Basic)</h3>
+                <p class="service-description" data-ru="Работа с модулями, API и файлами на Python" data-en="Working with modules, API and files in Python">Работа с модулями, API и файлами на Python</p>
+                <div class="service-price">380₽</div>
+            </div>
+        </div>
+
+        <!-- Аккаунты -->
+        <h2 class="category-title" data-ru="Аккаунты" data-en="Accounts">
+            <i class="fas fa-user-circle"></i>
+            <span>Аккаунты</span>
+        </h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3 class="service-title" data-ru="YOUTUBE аккаунт" data-en="YOUTUBE Account">YOUTUBE аккаунт</h3>
+                <p class="service-description" data-ru="Готовый аккаунт YouTube для ваших нужд" data-en="Ready YouTube account for your needs">Готовый аккаунт YouTube для ваших нужд</p>
+                <div class="service-price">400₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="FACEBOOK аккаунт" data-en="FACEBOOK Account">FACEBOOK аккаунт</h3>
+                <p class="service-description" data-ru="Аккаунт Facebook для бизнеса или личного использования" data-en="Facebook account for business or personal use">Аккаунт Facebook для бизнеса или личного использования</p>
+                <div class="service-price">250₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="INSTAGRAM аккаунт" data-en="INSTAGRAM Account">INSTAGRAM аккаунт</h3>
+                <p class="service-description" data-ru="Аккаунт Instagram с возможностью настройки" data-en="Instagram account with customization options">Аккаунт Instagram с возможностью настройки</p>
+                <div class="service-price">200₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="GMAIL аккаунт" data-en="GMAIL Account">GMAIL аккаунт</h3>
+                <p class="service-description" data-ru="Новый аккаунт Gmail для почты и сервисов Google" data-en="New Gmail account for email and Google services">Новый аккаунт Gmail для почты и сервисов Google</p>
+                <div class="service-price">200₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="TIK TOK (с ссылкой в профиле)" data-en="TIK TOK (with link in profile)">TIK TOK (с ссылкой в профиле)</h3>
+                <p class="service-description" data-ru="Аккаунт TikTok с возможностью добавления ссылки в профиль" data-en="TikTok account with the ability to add a link to the profile">Аккаунт TikTok с возможностью добавления ссылки в профиль</p>
+                <div class="service-price">250₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="TIK TOK (обычный)" data-en="TIK TOK (regular)">TIK TOK (обычный)</h3>
+                <p class="service-description" data-ru="Стандартный аккаунт TikTok для создания контента" data-en="Standard TikTok account for content creation">Стандартный аккаунт TikTok для создания контента</p>
+                <div class="service-price">150₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="DISCORD аккаунт" data-en="DISCORD Account">DISCORD аккаунт</h3>
+                <p class="service-description" data-ru="Аккаунт Discord для общения и управления сообществами" data-en="Discord account for communication and community management">Аккаунт Discord для общения и управления сообществами</p>
+                <div class="service-price">200₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="TELEGRAM аккаунт" data-en="TELEGRAM Account">TELEGRAM аккаунт</h3>
+                <p class="service-description" data-ru="Аккаунт Telegram для мессенджинга и каналов" data-en="Telegram account for messaging and channels">Аккаунт Telegram для мессенджинга и каналов</p>
+                <div class="service-price">200₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="TWITCH аккаунт" data-en="TWITCH Account">TWITCH аккаунт</h3>
+                <p class="service-description" data-ru="Аккаунт Twitch для стриминга и просмотра контента" data-en="Twitch account for streaming and content viewing">Аккаунт Twitch для стриминга и просмотра контента</p>
+                <div class="service-price">150₽</div>
+            </div>
+        </div>
+
+        <!-- Номера -->
+        <h2 class="category-title" data-ru="Номера" data-en="Phone Numbers">
+            <i class="fas fa-phone"></i>
+            <span>Номера</span>
+        </h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3 class="service-title">ФРАНЦИЯ +33</h3>
+                <p class="service-description" data-ru="Номер телефона Франции для регистрации и верификации" data-en="French phone number for registration and verification">Номер телефона Франции для регистрации и верификации</p>
+                <div class="service-price">830₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">ЯПОНИЯ +81</h3>
+                <p class="service-description" data-ru="Номер телефона Японии для различных сервисов" data-en="Japanese phone number for various services">Номер телефона Японии для различных сервисов</p>
+                <div class="service-price">800₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">ГЕРМАНИЯ +49</h3>
+                <p class="service-description" data-ru="Немецкий номер телефона для бизнеса и личного использования" data-en="German phone number for business and personal use">Немецкий номер телефона для бизнеса и личного использования</p>
+                <div class="service-price">750₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">БЕЛАРУСЬ +375</h3>
+                <p class="service-description" data-ru="Номер телефона Беларуси для местных и международных сервисов" data-en="Belarusian phone number for local and international services">Номер телефона Беларуси для местных и международных сервисов</p>
+                <div class="service-price">700₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">ПОЛЬША +48</h3>
+                <p class="service-description" data-ru="Польский номер телефона для регистрации аккаунтов" data-en="Polish phone number for account registration">Польский номер телефона для регистрации аккаунтов</p>
+                <div class="service-price">650₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">КИТАЙ +86</h3>
+                <p class="service-description" data-ru="Китайский номер телефона для верификации аккаунтов" data-en="Chinese phone number for account verification">Китайский номер телефона для верификации аккаунтов</p>
+                <div class="service-price">600₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">УКРАИНА +380</h3>
+                <p class="service-description" data-ru="Украинский номер телефона для различных сервисов" data-en="Ukrainian phone number for various services">Украинский номер телефона для различных сервисов</p>
+                <div class="service-price">600₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">БРАЗИЛИЯ +55</h3>
+                <p class="service-description" data-ru="Номер телефона Бразилии для регистрации" data-en="Brazilian phone number for registration">Номер телефона Бразилии для регистрации</p>
+                <div class="service-price">600₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">ТАИЛАНД +66</h3>
+                <p class="service-description" data-ru="Тайский номер телефона для верификации" data-en="Thai phone number for verification">Тайский номер телефона для верификации</p>
+                <div class="service-price">550₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">УЗБЕКИСТАН +998</h3>
+                <p class="service-description" data-ru="Номер телефона Узбекистана для различных целей" data-en="Uzbek phone number for various purposes">Номер телефона Узбекистана для различных целей</p>
+                <div class="service-price">550₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">АРГЕНТИНА +54</h3>
+                <p class="service-description" data-ru="Аргентинский номер телефона для регистрации" data-en="Argentine phone number for registration">Аргентинский номер телефона для регистрации</p>
+                <div class="service-price">550₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">ФИЛИППИНЫ +63</h3>
+                <p class="service-description" data-ru="Номер телефона Филиппин для верификации" data-en="Philippine phone number for verification">Номер телефона Филиппин для верификации</p>
+                <div class="service-price">550₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">ТУРЦИЯ +90</h3>
+                <p class="service-description" data-ru="Турецкий номер телефона для бизнеса и личного использования" data-en="Turkish phone number for business and personal use">Турецкий номер телефона для бизнеса и личного использования</p>
+                <div class="service-price">600₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">МЕКСИКА +52</h3>
+                <p class="service-description" data-ru="Мексиканский номер телефона для регистрации" data-en="Mexican phone number for registration">Мексиканский номер телефона для регистрации</p>
+                <div class="service-price">300₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">МАЛАЙЗИЯ +60</h3>
+                <p class="service-description" data-ru="Номер телефона Малайзии для верификации" data-en="Malaysian phone number for verification">Номер телефона Малайзии для верификации</p>
+                <div class="service-price">320₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">ВЕЛИКОБРИТАНИЯ +44</h3>
+                <p class="service-description" data-ru="Британский номер телефона для бизнеса" data-en="British phone number for business">Британский номер телефона для бизнеса</p>
+                <div class="service-price">300₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">ВЬЕТНАМ +84</h3>
+                <p class="service-description" data-ru="Вьетнамский номер телефона для регистрации" data-en="Vietnamese phone number for registration">Вьетнамский номер телефона для регистрации</p>
+                <div class="service-price">250₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">НИГЕРИЯ +234</h3>
+                <p class="service-description" data-ru="Номер телефона Нигерии для верификации" data-en="Nigerian phone number for verification">Номер телефона Нигерии для верификации</p>
+                <div class="service-price">250₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">ЕГИПЕТ +20</h3>
+                <p class="service-description" data-ru="Египетский номер телефона для различных сервисов" data-en="Egyptian phone number for various services">Египетский номер телефона для различных сервисов</p>
+                <div class="service-price">220₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">КОЛУМБИЯ +57</h3>
+                <p class="service-description" data-ru="Колумбийский номер телефона для регистрации" data-en="Colombian phone number for registration">Колумбийский номер телефона для регистрации</p>
+                <div class="service-price">200₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">КАНАДА +1</h3>
+                <p class="service-description" data-ru="Канадский номер телефона для бизнеса и личного использования" data-en="Canadian phone number for business and personal use">Канадский номер телефона для бизнеса и личного использования</p>
+                <div class="service-price">190₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">ИНДОНЕЗИЯ +62</h3>
+                <p class="service-description" data-ru="Индонезийский номер телефона для верификации" data-en="Indonesian phone number for verification">Индонезийский номер телефона для верификации</p>
+                <div class="service-price">180₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">КАЗАХСТАН +7</h3>
+                <p class="service-description" data-ru="Номер телефона Казахстана для местных сервисов" data-en="Kazakh phone number for local services">Номер телефона Казахстана для местных сервисов</p>
+                <div class="service-price">720₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">БАНГЛАДЕШ +880</h3>
+                <p class="service-description" data-ru="Номер телефона Бангладеш для регистрации" data-en="Bangladeshi phone number for registration">Номер телефона Бангладеш для регистрации</p>
+                <div class="service-price">200₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">АМЕРИКА +1</h3>
+                <p class="service-description" data-ru="Американский номер телефона для бизнеса" data-en="American phone number for business">Американский номер телефона для бизнеса</p>
+                <div class="service-price">180₽</div>
+            </div>
+        </div>
+
+        <!-- Другие услуги -->
+        <h2 class="category-title" data-ru="Другие услуги" data-en="Other Services">
+            <i class="fas fa-star"></i>
+            <span>Другие услуги</span>
+        </h2>
+        <div class="services-container">
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Сигна на заказ" data-en="Custom Signal">Сигна на заказ</h3>
+                <p class="service-description" data-ru="Индивидуальный сигнал по вашему запросу" data-en="Individual signal according to your request">Индивидуальный сигнал по вашему запросу</p>
+                <div class="service-price">150₽</div>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title" data-ru="Папки с НФТ чатами" data-en="NFT Chat Folders">Папки с НФТ чатами</h3>
+                <p class="service-description" data-ru="Папка с примерно 450 NFT чатами для различных целей" data-en="Folder with approximately 450 NFT chats for various purposes">Папка с примерно 450 NFT чатами для различных целей</p>
+                <div class="service-price">50₽</div>
+            </div>
+        </div>
+        
+        <button class="order-btn" id="order-btn">
+            <span data-ru="Заказать" data-en="Order">Заказать</span>
+            <div class="btn-sparkle"></div>
+        </button>
+    </section>
+    
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h3 id="modal-title" data-ru="Свяжитесь с нами" data-en="Contact Us">Свяжитесь с нами</h3>
+            <p id="modal-text" data-ru="Чтобы сделать заказ, свяжитесь с администратором в Телеграмме" data-en="To place an order, contact the administrator on Telegram">Чтобы сделать заказ, свяжитесь с администратором в Телеграмме</p>
+            <div class="modal-buttons">
+                <a href="https://t.me/K1rill_tg" target="_blank" class="modal-telegram-btn">
+                    <i class="fab fa-telegram"></i>
+                    <span data-ru="Перейти в Telegram" data-en="Go to Telegram">Перейти в Telegram</span>
+                </a>
+                <button class="modal-close" id="modal-close">
+                    <span data-ru="Закрыть" data-en="Close">Закрыть</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/background.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
